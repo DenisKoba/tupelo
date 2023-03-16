@@ -53,7 +53,7 @@ export const campaignSlice = createSlice({
 
       if (state.filter.search) {
         result = (result.length ? result : state.items).filter((item) =>
-          item.name.includes(state.filter.search)
+          item.name.toLowerCase().includes(state.filter.search.toLowerCase())
         );
       }
 
